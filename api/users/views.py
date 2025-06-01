@@ -8,7 +8,7 @@ class UserInfoView(RetrieveUpdateAPIView):
     permission_classes = (IsAuthenticated)
     serializer_class = CustomUserSerializer
 
-    def get_object(self):
+    def get_object(self): # Tells DRF which object to retrieve or update
         return self.request.user
 
 class UserRegistrationView(CreateAPIView):
